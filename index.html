@@ -254,7 +254,7 @@ body::after {
 }
 
 .hero {
-  padding: clamp(30px, 4vw, 50px) 0 clamp(28px, 4vw, 44px);
+  padding: clamp(30px, 4vw, 50px) 0 clamp(14px, 2vw, 20px);
   text-align: center;
 }
 .hero .lead { margin: 0 auto; }
@@ -569,6 +569,9 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
   .reveal { opacity: 1; transform: none; filter: none; }
 }
 
+.h1-desktop-br { display: inline; }
+.faq-title { margin-bottom: clamp(28px, 4vw, 44px); }
+
 @keyframes pricePulse {
   0%,100% { opacity: 1; }
   50%      { opacity: 0.9; }
@@ -584,6 +587,150 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
   pointer-events: none;
   z-index: 1;
   filter: drop-shadow(0 10px 18px rgba(0,0,0,0.4)) drop-shadow(4px 0px 8px rgba(193,255,114,0.08));
+}
+
+@media (min-width: 769px) {
+  div[style*="padding-top:clamp(28px,4vw,44px)"] { padding-top: 0 !important; }
+}
+
+/* ============================================
+   TABLET — up to 1024px
+   ============================================ */
+@media (max-width: 1024px) {
+  .wrap      { padding: 0 28px; }
+  .wrap-wide { padding: 0 28px; }
+  .pol-grid  { grid-template-columns: 1fr 1fr; gap: 16px; }
+}
+
+/* ============================================
+   MOBILE — up to 768px
+   ============================================ */
+@media (max-width: 768px) {
+
+  html, body, .page { overflow-x: hidden; }
+
+  .wrap, .wrap-wide {
+    max-width: 460px;
+    width: 100%;
+    padding: 0 18px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .section    { padding: 52px 0; }
+  .section-sm { padding: 36px 0; }
+
+  div[style*="padding:36px 0 8px"] {
+    padding: 18px 18px 18px !important;
+    text-align: center !important;
+  }
+
+  .hero { padding: 0 0 28px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+
+  .label { font-size: 0.6rem; padding: 5px 14px; margin-bottom: 14px; }
+  .label-break { display: block; }
+  .h1-desktop-br { display: none; }
+  .h1-line2 { white-space: normal; display: block; }
+  .h1-line2 span[style*="white-space:nowrap"] { white-space: nowrap !important; }
+  h1.serif {
+    font-size: 30px !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.2px !important;
+    margin-bottom: 16px !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  h1.serif span[style*="white-space:nowrap"] { white-space: normal !important; }
+  .lead { font-size: 16px !important; line-height: 1.65 !important; text-align: center !important; max-width: 100% !important; }
+
+  .btn-wrap { width: 100%; margin-top: 20px; gap: 8px; align-items: center; }
+  .btn { width: 85%; max-width: 340px; min-height: 52px; padding: 15px 20px; margin: 0 auto; border-radius: 12px; box-sizing: border-box; }
+  .btn-title { font-size: 1rem !important; }
+  .btn-sub   { font-size: 0.68rem; }
+  .btn-note  { font-size: 14px; text-align: center; }
+
+  .position-box { border-radius: 16px; height: auto !important; min-height: 0 !important; overflow: visible !important; }
+  .position-inner { min-height: 0 !important; height: auto !important; display: block !important; }
+  .position-body { font-size: 15px !important; line-height: 1.75 !important; width: 100% !important; box-sizing: border-box; }
+  .position-body > p:last-child { margin-bottom: 0 !important; }
+  .position-body .h2, .position-box .h2 { font-size: 1.45rem !important; line-height: 1.22 !important; margin-bottom: 14px !important; }
+  .position-body .break { padding-left: 14px; margin-top: 14px; font-size: 0.92rem; }
+  .stoic-mascot { display: none !important; }
+
+  .position-box .position-body, .product-box, .inside-box, .pol-box { padding-top: 24px !important; }
+  .position-body { padding: 24px 20px 24px !important; font-size: 15px !important; line-height: 1.75 !important; width: 100% !important; box-sizing: border-box; }
+  .pol-box { padding: 24px 20px !important; border-radius: 14px; width: 100%; box-sizing: border-box; }
+  .product-box { padding: 24px 20px 28px !important; border-radius: 18px; text-align: center; box-sizing: border-box; }
+
+  .yt-banner-wrap { padding: 0 18px !important; display: flex !important; justify-content: center !important; width: 100% !important; box-sizing: border-box; }
+  .yt-banner-wrap a svg { width: 28px !important; height: 28px !important; flex-shrink: 0 !important; }
+  .yt-banner-wrap a > span { font-size: 16px !important; line-height: 1.4 !important; }
+  .yt-break { display: block; text-align: center; }
+
+  div[style*="padding-top:clamp(28px,4vw,44px)"] { padding-top: 0 !important; padding-bottom: 28px !important; }
+  div[style*="padding-top:36px; padding-bottom:36px;"] { padding-top: 28px !important; }
+
+  div[style*="margin-top:52px"] { margin-top: 28px !important; display: flex !important; justify-content: center !important; width: 100% !important; box-sizing: border-box; }
+  div[style*="margin-top:52px"] a { padding: 10px 16px !important; gap: 10px !important; align-items: center !important; }
+  div[style*="margin-top:52px"] a svg { width: 28px !important; height: 28px !important; flex-shrink: 0 !important; }
+  div[style*="margin-top:52px"] a > span { font-size: 16px !important; line-height: 1.4 !important; }
+
+  a[style*="white-space:nowrap"] { white-space: normal !important; text-align: center !important; max-width: 92% !important; width: auto !important; margin: 0 auto !important; display: inline-flex !important; justify-content: center !important; box-sizing: border-box; }
+
+  .pol-grid { grid-template-columns: 1fr; gap: 14px; }
+  .pol-box { border-radius: 14px; width: 100%; box-sizing: border-box; }
+  .pol-box h3 { font-size: 1.15rem !important; margin-bottom: 12px; }
+  .pol-list li { font-size: 15px !important; line-height: 1.5 !important; }
+  .pol-yes:hover, .pol-no:hover { transform: none; }
+
+  div[style*="width:fit-content"] { width: 100% !important; max-width: 100% !important; flex-direction: column !important; flex-wrap: wrap !important; align-items: center !important; gap: 24px !important; padding: 0 18px !important; box-sizing: border-box; }
+  .mockup-img-col { order: 1; display: flex !important; width: 100% !important; justify-content: center !important; }
+  .mockup-text-col { order: 2; width: 100% !important; max-width: 100% !important; display: flex !important; flex-direction: column !important; }
+  .mockup-img-col img { width: 200px !important; max-width: 200px !important; display: block !important; margin: 0 auto !important; }
+  div[style*="width:360px"] { width: 100% !important; max-width: 100% !important; box-sizing: border-box; align-items: center !important; }
+  div[style*="width:360px"] h2 { font-size: 1.4rem !important; line-height: 1.25 !important; text-align: center !important; width: 100% !important; }
+  div[style*="width:360px"] > p { font-size: 15px !important; line-height: 1.7 !important; text-align: center !important; width: 100% !important; }
+  .return-line1 { display: block; }
+  .mockup-closing-line { margin-bottom: 0 !important; }
+  p[style*="border-left:2px solid rgba(212,175,55"] { margin: 0 auto !important; max-width: 300px !important; text-align: left !important; }
+  div[style*="padding:16px 0 36px"] { padding-bottom: 16px !important; }
+
+  .product-box { border-radius: 18px; text-align: center; box-sizing: border-box; }
+  .product-box .h2 { font-size: 1.65rem !important; line-height: 1.2 !important; text-align: center !important; }
+  .product-box .lead { font-size: 15px !important; line-height: 1.6 !important; text-align: center !important; }
+  span[style*="font-size:clamp(56px"] { font-size: 40px !important; display: block !important; text-align: center !important; margin: 20px 0 10px !important; }
+  p[style*="Instant access •"] { font-size: 13px !important; line-height: 1.5 !important; text-align: center !important; width: 100% !important; }
+  #offer.section { padding-bottom: 16px !important; }
+
+  .faq-wrap { max-width: 100%; width: 100%; }
+  .faq-title { margin-bottom: 0 !important; padding-bottom: 16px !important; }
+  #faq.section { padding-top: 16px !important; }
+  #faq .faq-item { margin-bottom: 10px !important; }
+  #faq .faq-item:first-of-type { margin-top: 16px !important; }
+  details.faq-item { border-radius: 10px; padding: 0 16px; margin-bottom: 12px; }
+  summary.faq-q { font-size: 15px !important; padding: 15px 0; gap: 8px; }
+  summary.faq-q::after { font-size: 1.35rem; }
+  .faq-a { font-size: 14px !important; line-height: 1.75 !important; padding-bottom: 14px; }
+
+  .footer { padding: 26px 18px; text-align: center; }
+  .footer p { font-size: 0.73rem; }
+  .footer .wrap { padding: 0 18px; }
+}
+
+/* ============================================
+   SMALL MOBILE — up to 400px
+   ============================================ */
+@media (max-width: 400px) {
+  .wrap, .wrap-wide { padding: 0 16px; max-width: 100%; }
+  h1.serif { font-size: 26px !important; }
+  .position-body { padding: 20px 16px 20px !important; }
+  .product-box { padding: 26px 14px 24px; }
+  .product-box .h2 { font-size: 1.4rem !important; }
+  span[style*="font-size:clamp(56px"] { font-size: 34px !important; margin: 16px 0 8px !important; }
+  .btn-title { font-size: 0.92rem !important; }
+  summary.faq-q { font-size: 14px !important; }
+  div[style*="width:fit-content"] { padding: 0 16px !important; }
 }
 </style>
 </head>
@@ -601,11 +748,11 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
 
   <div class="wrap">
     <header class="hero reveal">
-      <div class="label">A practical Stoic guide for emotional clarity</div>
+      <div class="label">A practical Stoic guide for <span class="label-break">emotional clarity</span></div>
       <h1 class="serif" style="text-align:center; font-size:clamp(2rem, 4.6vw, 3.4rem); line-height:1.18; font-weight:700; letter-spacing:-0.5px; margin-bottom:24px; width:100%;">
-        You can't control people.<br>
-        But you can stop <span style="-webkit-text-fill-color:#C1FF72;color:#C1FF72;font-style:italic;white-space:nowrap;">losing yourself</span><br>
-        because of them.
+        <span class="h1-line1">You can't control people.</span><br>
+        <span class="h1-line2">But you can stop <span style="-webkit-text-fill-color:#C1FF72;color:#C1FF72;font-style:italic;white-space:nowrap;">losing yourself</span><br class="h1-desktop-br">
+        because of them.</span>
       </h1>
       <p class="lead center">
         A simple Stoic guide to think clearly, react less, and regain emotional stability.
@@ -620,15 +767,11 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
     </header>
   </div>
 
-  
-
   <div class="section wrap reveal" style="padding-top:clamp(28px,4vw,44px); padding-bottom:clamp(20px,3vw,30px);">
     <div class="position-box" style="position:relative; box-shadow: 0 20px 40px rgba(0,0,0,0.6); overflow:hidden;">
-      <!-- green glow line: matches inside-box::before exactly -->
       <div style="position:absolute; top:-1px; left:15%; width:70%; height:1px; border-radius:50%; background:linear-gradient(to right, transparent 0%, rgba(193,255,114,0.3) 20%, rgba(193,255,114,0.75) 50%, rgba(193,255,114,0.3) 80%, transparent 100%); filter:blur(0.8px); z-index:3; pointer-events:none;"></div>
-      <!-- green glow halo: matches inside-box::after exactly -->
       <div style="position:absolute; top:-3px; left:25%; width:50%; height:5px; border-radius:50%; background:linear-gradient(to right, transparent 0%, rgba(193,255,114,0.06) 20%, rgba(193,255,114,0.18) 50%, rgba(193,255,114,0.06) 80%, transparent 100%); filter:blur(4px); z-index:2; pointer-events:none;"></div>
-      <div style="display:flex; align-items:center; justify-content:space-between; padding:0; min-height:300px;">
+      <div class="position-inner" style="display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; padding:0; min-height:0; gap:16px;">
         <div class="position-body" style="width:100%; padding:clamp(36px,5vw,56px) clamp(28px,4.5vw,52px); flex-shrink:0;">
           <h2 class="h2 serif" style="margin-bottom:clamp(16px,3vw,24px);">This is not motivation.<br><span style="color:#C1FF72; -webkit-text-fill-color:#C1FF72;">It is perspective.</span></h2>
           <p>Stoicism offers a different way to deal with this.</p>
@@ -644,12 +787,11 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
     </div>
   </div>
 
-  <div style="padding: 14px 0; display:flex; justify-content:center; position:relative; z-index:2;">
+  <div class="yt-banner-wrap" style="padding: 14px 0; display:flex; justify-content:center; position:relative; z-index:2;">
     <a href="https://www.youtube.com/channel/UCbFtrj3aAEbOYzzU0iGyRog?sub_confirmation=1" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:10px; background:rgba(28,28,28,0.85); border:1px solid rgba(193,255,114,0.35); border-radius:50px; padding:11px 22px; font-size:clamp(0.85rem,1.6vw,0.95rem); color:#d1d5db; font-weight:400; white-space:nowrap; box-shadow:0 0 0 1px rgba(193,255,114,0.12), 0 0 16px rgba(193,255,114,0.18), 0 0 32px rgba(193,255,114,0.08); text-decoration:none; cursor:pointer;">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ff4444" style="flex-shrink:0;"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#fff"/></svg><span style="font-size:inherit; font-weight:400; color:#d1d5db;">Follow <span style="font-weight:700; color:#c1ff72; -webkit-text-fill-color:#c1ff72;">Stoic Reset</span> on YouTube for daily clarity</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#ff4444" style="flex-shrink:0;"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#fff"/></svg><span style="font-size:inherit; font-weight:400; color:#d1d5db;">Follow <span style="font-weight:700; color:#c1ff72; -webkit-text-fill-color:#c1ff72;">Stoic Reset</span> on YouTube<span class="yt-break"> for daily clarity</span></span>
     </a>
   </div>
-
 
   <div class="section wrap-wide reveal" style="padding-top:36px; padding-bottom:36px;">
     <div class="pol-grid">
@@ -682,28 +824,22 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
   <div class="section reveal" style="padding:16px 0 36px; position:relative; z-index:2;">
     <div style="width:fit-content; max-width:860px; margin:0 auto; padding:0 clamp(22px,5vw,44px); display:flex; flex-direction:row; align-items:center; justify-content:center; gap:clamp(36px,5vw,56px); flex-wrap:nowrap;">
 
-      <!-- LEFT: MOCKUP IMAGE -->
-      <div style="flex:0 0 auto; display:flex; justify-content:center; align-items:center;">
+      <div class="mockup-img-col" style="flex:0 0 auto; display:flex; justify-content:center; align-items:center;">
         <img src="./assets/images/mockup.png" alt="Stoic Reset ebook mockup"
           style="width:320px; max-width:320px; height:auto; display:block; object-fit:contain;
                  filter:drop-shadow(0 32px 56px rgba(0,0,0,0.6)) drop-shadow(0 8px 20px rgba(0,0,0,0.4));">
       </div>
 
-      <!-- RIGHT: TEXT BLOCK -->
-      <div style="flex:0 0 auto; width:360px; display:flex; flex-direction:column; gap:22px;">
-
+      <div class="mockup-text-col" style="flex:0 0 auto; width:360px; display:flex; flex-direction:column; gap:22px;">
         <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.65rem,3.5vw,2.3rem); font-weight:700; line-height:1.18; color:#ffffff; letter-spacing:-0.4px; margin:0;">
-          A simple resource you can <em style="font-style:italic; color:#c1ff72; -webkit-text-fill-color:#c1ff72;">return to</em> anytime.
+          <span class="return-line1">A simple resource you can</span> <em style="font-style:italic; color:#c1ff72; -webkit-text-fill-color:#c1ff72;">return to</em> anytime.
         </h2>
-
         <p style="font-family:'Inter',sans-serif; font-size:clamp(0.95rem,1.8vw,1.05rem); color:#E5E7EB; line-height:1.85; font-weight:300; margin:0;">
           Not another video. Not another complicated system. Just a clear, practical guide to help you think more clearly, react less, and stop returning to what keeps hurting you.
         </p>
-
-        <p style="font-family:'Inter',sans-serif; font-size:clamp(0.88rem,1.5vw,0.97rem); color:#D4AF37; line-height:1.75; font-weight:400; margin:0; font-style:italic; padding-left:16px; border-left:2px solid rgba(212,175,55,0.4);">
+        <p class="mockup-closing-line" style="font-family:'Inter',sans-serif; font-size:clamp(0.88rem,1.5vw,0.97rem); color:#D4AF37; line-height:1.75; font-weight:400; margin:0; font-style:italic; padding-left:16px; border-left:2px solid rgba(212,175,55,0.4);">
           Read it at your own pace. Open it again whenever you need it.
         </p>
-
       </div>
 
     </div>
@@ -726,16 +862,14 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
         <a href="#offer" class="btn">
           <span class="btn-title">Get instant access</span>
         </a>
-        <p style="text-align:center; margin-top:14px; font-size:clamp(15px,1.5vw,17px); font-weight:700; color:#c1ff72; -webkit-text-fill-color:#c1ff72; letter-spacing:0.3px;">Instant access • No subscription • One-time payment</p>
+        <p style="text-align:center; margin-top:14px; font-size:clamp(15px,1.5vw,17px); font-weight:700; color:#c1ff72; -webkit-text-fill-color:#c1ff72; letter-spacing:0.3px; white-space:normal;">Instant access • No subscription • <span style="white-space:nowrap;">One-time payment</span></p>
       </div>
     </div>
   </div>
 
-  
-
   <div class="section wrap reveal" style="padding-top:36px;" id="faq">
     <div class="faq-wrap">
-      <h2 class="h2 serif" style="text-align:center; margin-bottom:clamp(28px,4vw,44px);">Questions</h2>
+      <h2 class="h2 serif faq-title" style="text-align:center;">Questions</h2>
 
       <details class="faq-item">
         <summary class="faq-q">💳 How much does it cost?</summary>
