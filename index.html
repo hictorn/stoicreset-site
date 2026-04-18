@@ -568,9 +568,32 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
   }
   .reveal { opacity: 1; transform: none; filter: none; }
 }
+.stoic-mascot {
+  position: absolute;
+  right: -8px;
+  bottom: 0px;
+  width: 190px;
+  height: auto;
+  opacity: 0.95;
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.4)) drop-shadow(4px 0px 8px rgba(193,255,114,0.08));
+}
+
 @keyframes pricePulse {
   0%,100% { opacity: 1; }
   50%      { opacity: 0.9; }
+}
+.stoic-mascot {
+  position: absolute;
+  right: -8px;
+  bottom: 0px;
+  width: 190px;
+  height: auto;
+  opacity: 0.95;
+  pointer-events: none;
+  z-index: 1;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.4)) drop-shadow(4px 0px 8px rgba(193,255,114,0.08));
 }
 </style>
 </head>
@@ -627,7 +650,7 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
           <p style="margin-top:6px;">This ebook helps you build that clarity.</p>
         </div>
       </div>
-      <img src="assets/images/stoic-mascot.png" alt="Stoic mascot" style="position:absolute; right:32px; bottom:24px; width:140px; height:auto; opacity:0.9; pointer-events:none; z-index:1;">
+      <img src="assets/images/stoic-mascot.png" alt="Stoic mascot" class="stoic-mascot">
     </div>
   </div>
 
