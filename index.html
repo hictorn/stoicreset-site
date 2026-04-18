@@ -218,7 +218,7 @@ body::after {
 .btn-title {
   color: #000;
   font-weight: 800;
-  font-size: clamp(0.95rem, 2vw, 1.08rem);
+  font-size: clamp(1.15rem, 2.4vw, 1.35rem);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -568,6 +568,10 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
   }
   .reveal { opacity: 1; transform: none; filter: none; }
 }
+@keyframes pricePulse {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0.9; }
+}
 </style>
 </head>
 <body>
@@ -606,7 +610,7 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
   
 
   <div class="section wrap reveal" style="padding-top:clamp(28px,4vw,44px); padding-bottom:clamp(20px,3vw,30px);">
-    <div class="position-box" style="position:relative; box-shadow: 0 20px 40px rgba(0,0,0,0.6);">
+    <div class="position-box" style="position:relative; box-shadow: 0 20px 40px rgba(0,0,0,0.6); overflow:hidden;">
       <!-- green glow line: matches inside-box::before exactly -->
       <div style="position:absolute; top:-1px; left:15%; width:70%; height:1px; border-radius:50%; background:linear-gradient(to right, transparent 0%, rgba(193,255,114,0.3) 20%, rgba(193,255,114,0.75) 50%, rgba(193,255,114,0.3) 80%, transparent 100%); filter:blur(0.8px); z-index:3; pointer-events:none;"></div>
       <!-- green glow halo: matches inside-box::after exactly -->
@@ -623,6 +627,7 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
           <p style="margin-top:6px;">This ebook helps you build that clarity.</p>
         </div>
       </div>
+      <img src="assets/images/stoic-mascot.png" alt="Stoic mascot" style="position:absolute; right:32px; bottom:24px; width:140px; height:auto; opacity:0.9; pointer-events:none; z-index:1;">
     </div>
   </div>
 
@@ -726,14 +731,17 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
       <p class="lead center" style="margin-top:16px;">
         If you are tired of overthinking, overreacting, and emotionally returning to what keeps hurting you, this ebook was made for you.
       </p>
-      <p style="text-align:center; margin-top:20px; font-size:0.85rem; color:var(--soft); font-style:italic;">
+      <p style="text-align:center; margin-top:16px; font-size:0.85rem; color:var(--soft); font-style:italic;">
         Digital ebook · Instant access after purchase.
       </p>
-      <div class="btn-wrap">
+      <p style="text-align:center; margin-top:24px; margin-bottom:24px; line-height:1;">
+        <span style="font-family:'Inter',sans-serif; font-size:clamp(56px,8vw,80px); font-weight:700; color:#c1ff72; -webkit-text-fill-color:#c1ff72; text-shadow:0 0 6px rgba(193,255,114,0.15); animation:pricePulse 3s ease-in-out infinite; display:inline-block; letter-spacing:-1px;">$9.90</span>
+      </p>
+      <div class="btn-wrap" style="margin-top:24px;">
         <a href="#offer" class="btn">
           <span class="btn-title">Get instant access</span>
         </a>
-        <span class="btn-note">Replace this button link with your checkout URL.</span>
+        <p style="text-align:center; margin-top:14px; font-size:clamp(15px,1.5vw,17px); font-weight:700; color:#c1ff72; -webkit-text-fill-color:#c1ff72; letter-spacing:0.3px;">Instant access • No subscription • One-time payment</p>
       </div>
     </div>
   </div>
