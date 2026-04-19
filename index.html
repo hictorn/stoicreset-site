@@ -612,7 +612,7 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
   .wrap, .wrap-wide {
     max-width: 460px;
     width: 100%;
-    padding: 0 18px;
+    padding: 0 clamp(20px, 5vw, 28px);
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
@@ -659,9 +659,9 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
   .stoic-mascot { display: none !important; }
 
   .position-box .position-body, .product-box, .inside-box, .pol-box { padding-top: 24px !important; }
-  .position-body { padding: 24px 20px 24px !important; font-size: 15px !important; line-height: 1.75 !important; width: 100% !important; box-sizing: border-box; }
-  .pol-box { padding: 24px 20px !important; border-radius: 14px; width: 100%; box-sizing: border-box; }
-  .product-box { padding: 24px 20px 28px !important; border-radius: 18px; text-align: center; box-sizing: border-box; }
+  .position-body { padding: 24px clamp(18px, 4.5vw, 26px) 24px !important; font-size: 15px !important; line-height: 1.75 !important; width: 100% !important; box-sizing: border-box; }
+  .pol-box { padding: 24px clamp(18px, 4.5vw, 26px) !important; border-radius: 14px; width: 100%; box-sizing: border-box; }
+  .product-box { padding: 24px clamp(18px, 4.5vw, 26px) 28px !important; border-radius: 18px; text-align: center; box-sizing: border-box; }
 
   .yt-banner-wrap { padding: 0 18px !important; display: flex !important; justify-content: center !important; width: 100% !important; box-sizing: border-box; }
   .yt-banner-wrap a svg { width: 28px !important; height: 28px !important; flex-shrink: 0 !important; }
@@ -716,7 +716,22 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
 
   .footer { padding: 26px 18px; text-align: center; }
   .footer p { font-size: 0.73rem; }
-  .footer .wrap { padding: 0 18px; }
+  .footer .wrap { padding: 0 clamp(20px, 5vw, 28px); }
+
+  /* LATERAL BREATHING — consistent on all screen sizes */
+  .wrap, .wrap-wide {
+    padding-left: clamp(20px, 5vw, 28px) !important;
+    padding-right: clamp(20px, 5vw, 28px) !important;
+  }
+  .position-body,
+  .pol-box,
+  .product-box,
+  details.faq-item,
+  .inside-box {
+    padding-left: clamp(18px, 4.5vw, 26px) !important;
+    padding-right: clamp(18px, 4.5vw, 26px) !important;
+    box-sizing: border-box !important;
+  }
 }
 
 /* ============================================
