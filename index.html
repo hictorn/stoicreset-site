@@ -612,7 +612,7 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
   .wrap, .wrap-wide {
     max-width: 460px;
     width: 100%;
-    padding: 0 18px;
+    padding: 0 24px;
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
@@ -659,11 +659,11 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
   .stoic-mascot { display: none !important; }
 
   .position-box .position-body, .product-box, .inside-box, .pol-box { padding-top: 24px !important; }
-  .position-body { padding: 24px 20px 24px !important; font-size: 15px !important; line-height: 1.75 !important; width: 100% !important; box-sizing: border-box; }
-  .pol-box { padding: 24px 20px !important; border-radius: 14px; width: 100%; box-sizing: border-box; }
-  .product-box { padding: 24px 20px 28px !important; border-radius: 18px; text-align: center; box-sizing: border-box; }
+  .position-body { padding: 24px 24px 24px !important; font-size: 15px !important; line-height: 1.75 !important; width: 100% !important; box-sizing: border-box; }
+  .pol-box { padding: 24px 24px !important; border-radius: 14px; width: 100%; box-sizing: border-box; }
+  .product-box { padding: 24px 24px 28px !important; border-radius: 18px; text-align: center; box-sizing: border-box; }
 
-  .yt-banner-wrap { padding: 0 18px !important; display: flex !important; justify-content: center !important; width: 100% !important; box-sizing: border-box; }
+  .yt-banner-wrap { padding: 0 24px !important; display: flex !important; justify-content: center !important; width: 100% !important; box-sizing: border-box; }
   .yt-banner-wrap a svg { width: 28px !important; height: 28px !important; flex-shrink: 0 !important; }
   .yt-banner-wrap a > span { font-size: 16px !important; line-height: 1.4 !important; }
   .yt-break { display: block; text-align: center; }
@@ -684,7 +684,7 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
   .pol-list li { font-size: 15px !important; line-height: 1.5 !important; }
   .pol-yes:hover, .pol-no:hover { transform: none; }
 
-  div[style*="width:fit-content"] { width: 100% !important; max-width: 100% !important; flex-direction: column !important; flex-wrap: wrap !important; align-items: center !important; gap: 24px !important; padding: 0 18px !important; box-sizing: border-box; }
+  div[style*="width:fit-content"] { width: 100% !important; max-width: 100% !important; flex-direction: column !important; flex-wrap: wrap !important; align-items: center !important; gap: 24px !important; padding: 0 24px !important; box-sizing: border-box; }
   .mockup-img-col { order: 1; display: flex !important; width: 100% !important; justify-content: center !important; }
   .mockup-text-col { order: 2; width: 100% !important; max-width: 100% !important; display: flex !important; flex-direction: column !important; }
   .mockup-img-col img { width: 200px !important; max-width: 200px !important; display: block !important; margin: 0 auto !important; }
@@ -708,7 +708,7 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
   #faq.section { padding-top: 16px !important; }
   #faq .faq-item { margin-bottom: 10px !important; }
   #faq .faq-item:first-of-type { margin-top: 16px !important; }
-  details.faq-item { border-radius: 10px; padding: 0 16px; margin-bottom: 12px; }
+  details.faq-item { border-radius: 10px; padding: 0 20px; margin-bottom: 12px; }
   summary.faq-q { font-size: 15px !important; padding: 15px 0; gap: 8px; }
   summary.faq-q::after { font-size: 1.35rem; }
   .faq-a { font-size: 14px !important; line-height: 1.75 !important; padding-bottom: 14px; }
@@ -716,50 +716,21 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
   .footer { padding: 26px 18px; text-align: center; }
   .footer p { font-size: 0.73rem; }
   .footer .wrap { padding: 0 18px; }
-
-  /* ===== SAFE iPHONE FIX — MOBILE ONLY ===== */
-  .position-body,
-  .pol-box,
-  .product-box,
-  details.faq-item,
-  .inside-box,
-  .mockup-text-col {
-    padding-left: 24px !important;
-    padding-right: 24px !important;
-    box-sizing: border-box !important;
-  }
-
-  .yt-banner-wrap a,
-  div[style*="margin-top:52px"] a {
-    padding-left: 24px !important;
-    padding-right: 24px !important;
-    box-sizing: border-box !important;
-  }
-
-  .position-body > *,
-  .pol-box > *,
-  .product-box > *,
-  details.faq-item > *,
-  .inside-box > *,
-  .mockup-text-col > * {
-    max-width: 100%;
-    box-sizing: border-box;
-  }
 }
 
 /* ============================================
    SMALL MOBILE — up to 400px
    ============================================ */
 @media (max-width: 400px) {
-  .wrap, .wrap-wide { padding: 0 16px; max-width: 100%; }
+  .wrap, .wrap-wide { padding: 0 20px; max-width: 100%; }
   h1.serif { font-size: 26px !important; }
-  .position-body { padding: 20px 16px 20px !important; }
-  .product-box { padding: 26px 14px 24px; }
+  .position-body { padding: 20px 20px 20px !important; }
+  .product-box { padding: 26px 20px 24px; }
   .product-box .h2 { font-size: 1.4rem !important; }
   span[style*="font-size:clamp(56px"] { font-size: 34px !important; margin: 16px 0 8px !important; }
   .btn-title { font-size: 0.92rem !important; }
   summary.faq-q { font-size: 14px !important; }
-  div[style*="width:fit-content"] { padding: 0 16px !important; }
+  div[style*="width:fit-content"] { padding: 0 20px !important; }
 }
 </style>
 </head>
