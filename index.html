@@ -25,7 +25,10 @@
   --inner-gap: 32px;
 }
 
-html { scroll-behavior: smooth; }
+html { 
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 body {
   font-family: 'Inter', sans-serif;
@@ -588,6 +591,12 @@ details.faq-item[open] summary.faq-q::after { transform: rotate(45deg); color: #
   }
   .reveal { opacity: 1; transform: none; filter: none; }
 }
+
+/* FIX SCROLL MOBILE */
+html, body {
+  overflow-x: hidden;
+}
+
 </style>
 </head>
 <body>
