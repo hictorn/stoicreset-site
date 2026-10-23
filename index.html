@@ -3,6 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K2E2SYBTJ8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K2E2SYBTJ8');
+</script>
 <title>Stoic Reset – The Power of Not Reacting</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -314,6 +321,16 @@ if ('IntersectionObserver' in window) {
 } else {
   reveals.forEach(el => el.classList.add('active'));
 }
+document.querySelectorAll('a[href*="pay.hotmart.com/"]').forEach((link, index) => {
+  link.addEventListener('click', () => {
+    gtag('event', 'cta_hotmart_click', {
+      event_category: 'commercial',
+      cta_position: index + 1,
+      link_url: link.href,
+      transport_type: 'beacon'
+    });
+  });
+});
 const urlParams = new URLSearchParams(window.location.search);
 const utmKeys = ['utm_source','utm_campaign','utm_medium','utm_content','utm_term'];
 const utmParams = {};
