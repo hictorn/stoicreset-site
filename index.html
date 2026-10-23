@@ -322,11 +322,14 @@ if ('IntersectionObserver' in window) {
   reveals.forEach(el => el.classList.add('active'));
 }
 document.querySelectorAll('a[href*="pay.hotmart.com/"]').forEach((link, index) => {
+  const ctaPositions = ['hero_top', 'offer_bottom'];
   link.addEventListener('click', () => {
-    gtag('event', 'cta_hotmart_click', {
-      event_category: 'commercial',
-      cta_position: index + 1,
-      link_url: link.href,
+    gtag('event', 'hotmart_checkout_click', {
+      language: 'en',
+      ebook: 'stoic_reset',
+      cta_position: ctaPositions[index] || 'unknown',
+      page_location: window.location.href,
+      destination: link.href,
       transport_type: 'beacon'
     });
   });
